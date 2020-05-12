@@ -13,9 +13,71 @@
     height: 100px;
     width: 100%;
     background-color: #253141;
-    
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .top-items {
+      height: 20px;
+      width: 260px;
+      background-color: #253141;
+      display: flex;
+      justify-content: space-between;
+      &__name {
+        height: 20px;
+        line-height: 20px;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+
+      }
+      &__icons {
+        height: 20px;
+        width: 60px;
+        text-align: right;
+        &__btn--edit{
+          color: #ffffff;
+          text-decoration: none;
+        }
+        &__btn--cog{
+          color: #ffffff;
+          text-decoration: none;
+          margin-left: 5px;
+        }
+        
   
+
+      }
+    }
+  }
+  &__groups {
+    height: calc(100vh - 100px);
+    width: 100%;
+    padding: 20px 20px 0;
+    .group {
+      height: 31px;
+      width: 100%;
+      margin-bottom: 40px;
+      &__name {
+        height: 15px;
+        width: 100%;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 15px;
+        margin-bottom: 5px;
+        
+      }
+      &__messages {
+        height: 11px;
+        width: 100%;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 11px;
+      }
+
+    }
+  }
 }
 
 .chat-main {
@@ -24,13 +86,75 @@
   background-color: #ffffff;
   &__header {
     height: 100px;
-    width: 100%;
     background-color: #ffffff;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    .group__info {
+      height: 100%;
+      padding-top: 35px;
+      .group__name {
+        height: 20px;
+        margin-bottom: 15px;
+        color: #333333;
+        font-size: 20px;
+        line-height: 20px;
+      }
+      .member__list {
+        height: 12px;
+        color: #999999;
+        font-size: 12px;
+        line-height: 12px;
+        list-style: none;
+        display: flex;
+        &__name {
+          margin-left: 4px;
+        }
+      }
+    }
+    .group__edit {
+      height: 40px;
+      width: 72px;
+      margin-top: 28px;
+      padding: 12px 0;
+      text-align: center;
+      border: 1px solid #38aef0;
+      line-height: 16px;
+      &__btn{
+        color: #38aef0;
+        font-size: 16px;
+      }
+
+
+
+    }
   }
   &__contents {
     height: calc(100vh - 190px);
     width: 100%;
     background-color: #fafafa;
+    padding: 35px 0 0 40px;
+    &__group {
+      .info {
+        display: flex;
+        margin-bottom: 12px;
+        .person {
+          color: #333333;
+          font-size: 16px;
+        }
+        .date {
+          color: #999999;
+          font-size: 12px;
+
+        } 
+
+      }
+      .post {
+        color: #434A54;
+        font-size: 14px;
+        margin-bottom: 46px;
+      }
+    }
   }
   &__footer {
     height: 90px;

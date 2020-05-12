@@ -1,4 +1,25 @@
 .chat-main
   .chat-main__header
+    .group__info
+      .group__name
+        test
+      %ul.member__list
+        Member :
+        %li.member__list__name
+          name
+        %li.member__list__name
+          name
+    .group__edit
+      = link_to "#", class: "group__edit__btn" do
+        Edit
   .chat-main__contents
-  .chat-main__footer
+    .chat-main__contents__group
+      .info
+        %p.person
+          name
+        %p.date
+          2020/05/13(Wed) 03:00:00
+      .post
+        text
+
+  %form.chat-main__footer

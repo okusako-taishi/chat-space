@@ -1,5 +1,17 @@
 .side-bar
-  
   .side-bar__header
-
+    .top-items
+      .top-items__name
+        name
+      .top-items__icons
+        = link_to "#", class: "top-items__icons__btn--edit" do
+          %i.far.fa-edit
+        = link_to "#", class: "top-items__icons__btn--cog" do
+          %i.fas.fa-cog
+  .side-bar__groups
+    .group
+      .group__name
+        techcamp
+      .group__messages
+        まだメッセージがありません
 
