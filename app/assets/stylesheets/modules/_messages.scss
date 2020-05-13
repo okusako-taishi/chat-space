@@ -123,6 +123,7 @@
       &__btn{
         color: #38aef0;
         font-size: 16px;
+        text-decoration: none;
       }
 
 
@@ -160,6 +161,42 @@
     height: 90px;
     width: 100%;
     background-color: #d2d2d2;
+    padding: 20px 40px;
+    display: flex;
+    &__post {
+      display: flex;
+      height: 50px;
+      width: calc( 100vw - 495px);
+      position: relative;
+      &__text {
+        height: 50px;
+        width: 100%;
+        padding: 0 10px;
+        position: absolute;
+        top: 0;
+      }
+      &__image {
+        position: absolute;
+        top: 19px;
+        right: 10px;
+        cursor: pointer;
+        &__file{
+          display: none;
+          
+        }
+      }
+    }
+    &__send {
+      height: 50px;
+      width: 100px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: #ffffff;
+      cursor: pointer;
+
+    }
+
+
   }
 
 }
