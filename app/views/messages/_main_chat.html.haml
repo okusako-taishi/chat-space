@@ -2,30 +2,23 @@
   .chat-main__header
     .group__info
       .group__name
-        test
+        = @group.name
       %ul.member__list
         Member :
         %li.member__list__name
-          name
-        %li.member__list__name
-          name
+          - @group.users.each do |user|
+            = user.name
     .group__edit
-      = link_to edit_group_path(current_user), class: "group__edit__btn" do
+      = link_to edit_group_path(@group), class: "group__edit__btn" do
         Edit
   .chat-main__contents
-    .chat-main__contents__group
-      .info
-        %p.person
-          name
-        %p.date
-          2020/05/13(Wed) 03:00:00
-      .post
-        text
+    = render @messages
 
-  %form.chat-main__footer
-    .chat-main__footer__post
-      %input.chat-main__footer__post__text{type: "text", placeholder: "type a message"}
-      %label{class: "chat-main__footer__post__image"}
-        %i.far.fa-image
-        %input.chat-main__footer__post__image__file{type: "file"}
-    %input.chat-main__footer__send{type: "submit", value: "Send" }
+  .chat-main__footer
+    = form_for [@group, @message] do |f|
+      .chat-main__footer__post
+        = f.text_field :content, class: 'chat-main__footer__post__text', placeholder: 'type a message'
+        = f.label :image, class: 'chat-main__footer__post__image' do
+          %i.far.fa-image
+          = f.file_field :image, class: 'chat-main__footer__post__image__file'
+      = f.submit 'Send', class: 'chat-main__footer__send' 
