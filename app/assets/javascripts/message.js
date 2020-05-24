@@ -25,13 +25,13 @@ $(function(){
   function buildHTML(message) {
     if (message.image){
       var html = 
-        `<div class="chat-main__contents__group" data-massage-id=${message.id}>
+        `<div class="chat-main__contents__group" data-message-id=${message.id}>
           <div class="info">
             <p class="person">
               ${message.user_name}
             </p>
             <p class="date">
-              ${massae.crated_at}
+              ${message.crated_at}
             </p>
           </div>
           <div class="post">
@@ -44,7 +44,7 @@ $(function(){
       return html;
     } else {
       var html =
-        `<div class="chat-main__contents__group" data-message-id=${message.id}">
+        `<div class="chat-main__contents__group" data-message-id=${message.id}>
           <div class="info">
             <p class="person">
               ${message.user_name}
