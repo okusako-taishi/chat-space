@@ -31,7 +31,7 @@ $(function(){
               ${message.user_name}
             </p>
             <p class="date">
-              ${message.crated_at}
+              ${message.created_at}
             </p>
           </div>
           <div class="post">
