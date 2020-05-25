@@ -86,6 +86,7 @@
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
+    border-bottom: solid 1px #eee;
     .group__info {
       height: 100%;
       padding-top: 35px;
@@ -112,7 +113,7 @@
       height: 40px;
       width: 72px;
       margin-top: 28px;
-      padding: 12px 0;
+      padding: 12px 20px;
       text-align: center;
       border: 1px solid #38aef0;
       line-height: 16px;
@@ -136,6 +137,8 @@
         .person {
           color: #333333;
           font-size: 16px;
+          font-weight: bold;
+          margin-right: 10px;
         }
         .date {
           color: #999999;
@@ -172,7 +175,7 @@
         }
         &__image {
           position: absolute;
-          top: 19px;
+          top: 16px;
           right: 10px;
           cursor: pointer;
           &__file{
@@ -188,6 +191,9 @@
         color: #ffffff;
         cursor: pointer;
       }
+  }
+  .far {
+    font-size: 1.3rem;
   }
 }
 
