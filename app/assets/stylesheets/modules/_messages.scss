@@ -54,6 +54,10 @@
       height: 31px;
       width: 100%;
       margin-bottom: 40px;
+
+      &__link {
+        text-decoration: none;
+      }
       &__name {
         height: 15px;
         width: 100%;
@@ -195,5 +199,7 @@
   .far {
     font-size: 1.3rem;
   }
+
+
 }
 
